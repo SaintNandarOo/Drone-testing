@@ -13,9 +13,7 @@ trigger:
   event:
     include:
     - push
-  trigger:
-    branch:
+  branch:
   - branch1
-  trigger:
-    branch:
+  branch:
   - main
