@@ -11,9 +11,5 @@ steps:
   
 trigger:
   event:
-    include:
+    incude:
     - push
-  branch:
-  - branch1
-  branch:
-  - main
