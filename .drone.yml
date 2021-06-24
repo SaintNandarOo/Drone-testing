@@ -11,5 +11,5 @@ steps:
  
  trigger:
   event:
-    exclude:
+    incude:
     - push
