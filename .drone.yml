@@ -1,15 +1,28 @@
 kind: pipeline
-type: docker
-name: default
+name: testing
 
 steps:
-- name: lint
-  image: python:3.7-alpine
+- name: first
+  image: php
   commands:
-  - python -m pip install -r requirements.txt
-  - flake8
+  - echo “Output from first step”;
+
+- name: second
+  image: php
+  commands:
+  - echo “Output from second step”;
+
+- name: third
+  image: php
+  commands:
+  - echo “Output from third step”;
   
-trigger:
-  event:
-    incude:
-    - push
+- name: fourth
+  image: php
+  commands:
+  - echo “Output from fourth step”;
+
+  depends_on:
+  - first
+  - second
+  - third
